@@ -1,6 +1,101 @@
+html {
+    background-color: #020659;
+}
 
+body {
+    min-width: 375px;
+    max-width: 834px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+    color: white;
+    margin: 0 auto;
+}
 
+nav h2 {
+    display: none;
+}
 
+h1 {
+    font-size: 1.25em;
+    line-height: 2em;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h2, h3 {
+    font-size: 1em;
+    color: #590242;
+    line-height: 2em;
+}
+
+p, dl, dd {
+    font-size: 1em;
+}
+
+dl {
+    display: flex;
+}
+
+dt {
+    padding-right: 5px;
+    font-style: italic;
+}
+
+dt, dd {
+    color: #590242;
+    top: 50%;
+}
+
+audio {
+    position: absolute;
+    bottom: 150px;
+    left: 5px;
+}
+
+footer p {
+    font-size: .75em;
+}
+
+.sidebyside {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#playlist {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: #2699FB;
+}
+
+#curated {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+/*DOUBLE CHECK*/
+.verticalscroll {
+    display: grid;
+    grid-template-columns: repeat(1fr, 5);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.verticalscroll section {
+    margin: 10px;
+    position: relative;
+}
+
+.verticalscroll div {
+    position: absolute;
+    top: 251px;
+    background-color: rgba(255,255,255,.75);
+    padding: 5px;
+    height: 50px;
+    width: 350px;
+}
 
 
 /*------------------------------------------------------------------------------------------------------------------------ */
@@ -108,21 +203,7 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     width: 350px;
 }
 
-dl {
-    display: flex;
-}
-
-dt {
-    padding-right: 5px;
-}
-
-audio {
-    position: absolute;
-    bottom: 150px;
-    left: 5px;
-}
-
-.more {
+.button {
     text-decoration: none;
     background-color: #590242;
     color: #ffffff;
@@ -132,9 +213,11 @@ audio {
     display: block;
     text-align: center;
     margin: 10px 0 30px 32px;
+    position: relative;
+    left: 70%;
 }
 
-.more:hover {
+.button:hover {
     background-color: #020659;
 }
 
@@ -190,27 +273,3 @@ audio::-webkit-media-controls-enclosure {
 }
 
 /*-----*/
-
-body {
-    font-family: Optima, sans-serif;
-    color: #ffffff;
-}
-
-h1 {
-    font-size: 22px;
-    line-height: 2em;
-}
-
-h1, h2, h3 {
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-h2, h3 {
-    font-size: 20px;
-    color: #590242;
-    line-height: 2em;
-}
-
-
-
