@@ -1,104 +1,96 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*End CSS Reset */
+
+
+
+
 html {
     background-color: #020659;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
     min-width: 375px;
     max-width: 834px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: white;
     color: white;
     margin: 0 auto;
+}
+
+nav {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    background-color: #020A8C;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
 }
 
 nav h2 {
     display: none;
 }
 
-h1 {
-    font-size: 1.25em;
-    line-height: 2em;
+nav li {
+    margin: 0 10px;
+    padding: 10px;
 }
 
-h1, h2, h3 {
-    font-weight: bold;
-    text-transform: uppercase;
+nav li.nav1 {
+    font-size: x-large;
+    font-variant: small-caps;
+    font-weight: bolder;
+    padding: 10px;
 }
-
-h2, h3 {
-    font-size: 1em;
-    color: #590242;
-    line-height: 2em;
-}
-
-p, dl, dd {
-    font-size: 1em;
-}
-
-dl {
-    display: flex;
-}
-
-dt {
-    padding-right: 5px;
-    font-style: italic;
-}
-
-dt, dd {
-    color: #590242;
-}
-
-audio {
-    position: absolute;
-    bottom: 150px;
-    left: 5px;
-}
-
-footer p {
-    font-size: .75em;
-}
-
-.sidebyside {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-#playlist {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    background-color: #2699FB;
-}
-
-#curated {
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-
-/*DOUBLE CHECK*/
-.verticalscroll {
-    display: grid;
-    grid-template-columns: repeat(1fr, 5);
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-.verticalscroll section {
-    margin: 10px;
-    position: relative;
-}
-
-.verticalscroll div {
-    position: absolute;
-    top: 251px;
-    background-color: rgba(255,255,255,.75);
-    padding: 5px;
-    height: 50px;
-    width: 350px;
-}
-
-
-/*------------------------------------------------------------------------------------------------------------------------ */
-
 
 ul {
     overflow: hidden;
@@ -165,21 +157,144 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     top: 0;
 }
 
-@media screen and (min-width:834px) {
-    ul {
-        overflow: visible;
-        position: absolute;
-        top: 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
-    label span, input {
-        display: none;
-    }
+header {
+    min-width: 375px;
+    max-width: 834px;
+    position: relative;
+    padding: 10px 30px 30px 30px;
+    background: linear-gradient(to right, #2104D4, #000000);
 }
 
+header h2 {
+    position: relative;
+    padding: 10px;
+    bottom: 5px;
+}
 
-/*-----*/
+h1 {
+    font-size: 1.25em;
+    line-height: 2em;
+}
+
+h2 {
+    color: #590242;
+}
+
+h3 {
+    color: #ffffff;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h2, h3 {
+    font-size: 1em;
+    line-height: 2em;
+    padding-left: 30px;
+}
+
+p, dl, dd {
+    font-size: 1em;
+}
+
+dl {
+    display: flex;
+}
+
+dt {
+    padding-right: 5px;
+    font-style: italic;
+}
+
+dd {
+    position: relative;
+    left: 5px;
+}
+
+dt, dd {
+    color: #590242;
+}
+
+audio {
+    position: absolute;
+    bottom: 150px;
+    left: 5px;
+}
+
+audio::-webkit-media-controls-mute-button {
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-play-button {
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-enclosure {
+    background-color: rgba(255,255,255,.5);
+    opacity: .5;
+}
+
+#trending {
+    position: relative;
+    padding: 20px 0 10px 0;
+}
+
+#trending h3 {
+    color: #590242;
+    position: relative;
+    right: 30px;
+}
+
+#trending ::-webkit-scrollbar {
+    width: 15px;
+}
+
+#trending ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #590242;
+}
+
+#trending ::-webkit-scrollbar-thumb {
+    background: #590242;
+    border-radius: 5px;
+}
+
+#trending ::-webkit-scrollbar-thumb:hover {
+    background: #020659;
+}
+
+.sidebyside {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#playlist {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#curated {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+    width: 15px;
+}
+
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+    box-shadow: inset 0 0 15px #020659;
+}
+
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+    background: #020659;
+    border-radius: 5px;
+}
+
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
 
 .scroll {
     display: grid;
@@ -202,7 +317,49 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     width: 350px;
 }
 
-.button {
+.verticalscroll1 {
+    display: grid;
+    grid-template-columns: repeat(1fr, 5);
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 450px;
+    background-color: #2699fb;
+}
+
+.verticalscroll1 section {
+    margin: 10px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #0D8DFB;
+}
+
+.verticalscroll1 section p {
+    grid-column-start: 2;
+}
+
+.verticalscroll2 {
+    display: grid;
+    grid-template-columns: repeat(1fr, 5);
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 450px;
+    background-color: #020697;
+}
+
+.verticalscroll2 section {
+    margin: 10px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #020873;
+}
+
+.verticalscroll2 section p {
+    grid-column-start: 2;
+}
+
+.button1 {
     text-decoration: none;
     background-color: #590242;
     color: #ffffff;
@@ -213,62 +370,154 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     text-align: center;
     margin: 10px 0 30px 32px;
     position: relative;
-    left: 70%;
+    left: 73%;
 }
 
-.button:hover {
+.button1:hover {
     background-color: #020659;
 }
 
-/*-----*/
-
-audio::-webkit-media-controls-mute-button {
-    background-color: #ffffff;
-    border-radius: 50%;
-}
-audio::-webkit-media-controls-play-button {
-    background-color: #ffffff;
-    border-radius: 50%;
-}
-audio::-webkit-media-controls-enclosure {
-    background-color: rgba(255,255,255,.5);
-    opacity: .5;
-}
-
-/*-----*/
-
-#trending ::-webkit-scrollbar {
-    width: 15px;
-}
-
-#trending ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 15px #590242;
-}
-
-#trending ::-webkit-scrollbar-thumb {
-    background: #590242;
+.button2 {
+    text-decoration: none;
+    background-color: #590242;
+    color: #ffffff;
     border-radius: 5px;
+    padding: 10px;
+    width: 150px;
+    display: block;
+    text-align: center;
+    margin: 10px 0 30px 32px;
+    position: relative;
+    left: 23%;
 }
 
-#trending ::-webkit-scrollbar-thumb:hover {
-    background: #020659;
+.button2:hover {
+    background-color: #020659;
 }
 
-#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
-    width: 15px;
-}
-
-#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
-    box-shadow: inset 0 0 15px #020659;
-}
-
-#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
-    background: #020659;
+.button3 {
+    text-decoration: none;
+    background-color: #590242;
+    color: #ffffff;
     border-radius: 5px;
+    padding: 10px;
+    width: 150px;
+    display: block;
+    text-align: center;
+    margin: 10px 0 30px 32px;
+    position: relative;
+    left: 73%;
+    bottom: 66px;
 }
 
-#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
-    background: #ffffff;
+.button3:hover {
+    background-color: #020659;
 }
 
-/*-----*/
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+footer p {
+    font-size: .75em;
+    color: #590242;
+    position: relative;
+    bottom: 40px;
+}
+
+@media screen and (min-width:834px) {
+    ul {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    label span, input {
+        display: none;
+    }
+}
+
+@media  screen and (max-width: 834px) {
+
+    nav li.nav1 {
+        margin-right: auto;
+    }
+
+    .button1 {
+        left: 0%;
+    }
+    
+    .sidebyside {
+        display: contents;
+        overflow-x: auto;
+        overflow-y: hidden;
+        position: relative;
+        padding: 20px 0 10px 0;
+    }
+
+    .verticalscroll1 {
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        height: 300px;
+    }
+
+    .verticalscroll1 section {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .verticalscroll1 img {
+        margin: 10px 10px 0 10px;
+    }
+
+    .verticalscroll1 div {
+        text-align: center;
+    }
+
+    .verticalscroll1 h3 {
+        position: relative;
+        right: 10px;
+    }
+
+    #curated {
+        margin-top: 70px;
+    }
+
+    .verticalscroll2 {
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        height: 300px;
+    }
+
+    .verticalscroll2 section {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .verticalscroll2 img {
+        margin: 10px 10px 0 10px;
+    }
+
+    .verticalscroll2 div {
+        text-align: center;
+    }
+
+    .verticalscroll2 h3 {
+        position: relative;
+        right: 10px;
+    }
+
+    .button2 {
+        bottom: 400px;
+        left: 0%;
+    }
+
+    .button3 {
+        left: 0%;
+    }
+
+}

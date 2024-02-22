@@ -9,24 +9,24 @@
     </head>
 
     <body>
-        <header>
-            <h1>Smooth Jazz</h1>
-            <p>This station is dedicated to the soothing sounds of smooth jazz. This genre of commercially oriented crossover jazz became dominant in the 1980s and early 1990s.</p>
-        </header>
-
         <nav>
             <h2>Main Navigation</h2>
             <input type="checkbox" id="dropdown">
             <label for="dropdown"><span></span></label>
 
             <ul>
-                <li><a href="#home">MuzakMaker</a></li>
+                <li class="nav1"><a href="#home">MuzakMaker</a></li>
                 <li><a href="#trending">Trending<br>Songs</a></li>
                 <li><a href="#playlists">Your<br>Playlists</a></li>
                 <li><a href="#curated">Curated<br>Playlists</a></li>
                 <li><a href="user"><img src="images/duke-silver.png" alt="user profile picture"></a></li>
             </ul>
         </nav>
+        
+        <header>
+            <h1>Smooth Jazz</h1>
+            <p>This station is dedicated to the soothing sounds of smooth jazz. This genre of commercially oriented crossover jazz became dominant in the 1980s and early 1990s.</p>
+        </header>
 
         <main>
             <section id="trending">
@@ -42,7 +42,7 @@
                     </div>
                     <img src="images/aloma-cover.png" alt="white dove on black background">
                     <audio
-                        control 
+                        controls 
                         src="audio/aloma.mp3">
                         Your browser does not support the <code>audio</code>element.
                     </audio>
@@ -57,7 +57,7 @@
                     </div>
                     <img src="images/my-road-cover.png" alt="middle of the road in a desert highway">
                     <audio
-                        control 
+                        controls 
                         src="audio/my-road.mp3">
                         Your browser does not support the <code>audio</code>element.
                     </audio>
@@ -72,7 +72,7 @@
                     </div>
                     <img src="images/papaya-cover.png" alt="A papaya on a green background">
                     <audio
-                        control 
+                        controls 
                         src="audio/papaya.mp3">
                         Your browser does not support the <code>audio</code>element.
                     </audio>
@@ -87,7 +87,7 @@
                     </div>
                     <img src="images/smoothies-cover.png" alt="Fruits and a smoothie on a table">
                     <audio
-                        control 
+                        controls 
                         src="audio/smoothies.mp3">
                         Your browser does not support the <code>audio</code>element.
                     </audio>
@@ -102,20 +102,20 @@
                     </div>
                     <img src="images/successful-performance-cover.png" alt="A man in a red sweater expressing joy">
                     <audio
-                        control 
+                        controls 
                         src="audio/successful-performance.mp3">
                         Your browser does not support the <code>audio</code>element.
                     </audio>
                 </section>
                 </div>
-                <a class="button" href="#trending">More trending</a>
+                <a class="button1" href="#trending">More trending</a>
             </section>
 
 
             <div class="sidebyside">
                 <section id="playlists">
                     <h2>Your Playlists</h2>
-                    <div class="verticalscroll">
+                    <div class="verticalscroll1">
                         <section>
                             <img src="images/best-of-2020-cover.png" alt="The text '2020' on a black background.">
                             <div>
@@ -152,13 +152,11 @@
                             </div>
                         </section>
                     </div>
-
-                    <a class="button" href="#trending">All your playlists</a>
                 </section>
 
                 <section id="curated">
                     <h2>Curated Playlists</h2>
-                    <div class="verticalscroll">
+                    <div class="verticalscroll2">
                         <section>
                             <img src="images/boozy-brunch-cover.png" alt="A group of people celebrating over brunch.">
                             <div>
@@ -171,6 +169,13 @@
                             <div>
                                 <h3>Dinner Party</h3>
                                 <p>Background music to give your party life, but allow your guests to chat. </p>
+                            </div>
+                        </section>
+                        <section>
+                            <img src="images/mellow-cover.png" alt="A park with a tree and bench.">
+                            <div>
+                                <h3>Mellow</h3>
+                                <p>Relax after a stressful day with this collection of extra smooth jazz.</p>
                             </div>
                         </section>
                         <section>
@@ -188,10 +193,14 @@
                             </div>
                         </section>
                     </div>
-
-                    <a class="button" href="#trending">More Curated</a>
                 </section>
             </div>
+
+            <div>
+                <a class="button2" href="#playlists">All your playlists</a>
+                <a class="button3" href="#curated">More Curated</a>
+            </div>
+
         </main>
 
         <footer>
